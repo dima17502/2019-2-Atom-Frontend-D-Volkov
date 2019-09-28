@@ -1,18 +1,32 @@
-function nonUniqueElements(data) {
-  let res = [];
-  let frequency = new Object();
-  let size = data.length;
-  for(let i = 0; i < size; i++)
-  {
-    frequency[data[i]] = (frequency[data[i]] + 1) || 1;
+/*
+ * Функция `convertBytesToHuman` должна принимать
+ * аргумент `bytes` только числового типа.
+ * Необходимо предусмотреть защиту от
+ * передачи аргументов неправильного типа
+ * и класса (например, отрицательные числа)
+ */
+
+function convertBytesToHuman(bytes) {
+  if(typeof bytes != 'number'){
+    console.log("Invalid type");
+    return false;
   }
-  for(let i = 0; i < size; i++)
-  {
-    if(frequency[data[i]] > 1){
-      res.push(data[i]);
-    }
+  let input = bytes.toString();
+  let size = input.length;
+  if(!(/^\d+$/.exec(input))){
+    console.log("Input should be a positive integer");
+    return false;
+  }
+  if(!(/^[01]+$/.exec(input))){
+    return parseInt(input, 10);
+  }
+  let coefficient = 1;
+  let res = 0;
+  for(let i = size -1; i >= 0; i--){
+    res += (coefficient * input[i]);
+    coefficient *= 2;
   }
   return res;
 }
-
-module.exports = nonUniqueElements;
+console.log(convertBytesToHuman(123));
+module.exports = convertBytesToHuman;
