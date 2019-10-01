@@ -1,5 +1,4 @@
-const convertBytesToHuman = require('./convertBytesToHuman.js');
-
+const convertBytesToHuman =  require('./convertBytesToHuman.js');
 
 test('Возвращает false для неправильного типа данных', () => {
   expect(convertBytesToHuman([])).toBe(false);
