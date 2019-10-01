@@ -1,5 +1,5 @@
 
-const nonUniqueElements = require('./nonUniqueElements');
+const  nonUniqueElements = require('./nonUniqueElements');
 
 
 test('returns non unique elements', () => {
