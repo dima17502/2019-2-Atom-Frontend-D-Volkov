@@ -1,4 +1,4 @@
-const nonUniqueElements = require('./nonUniqueElements');
+const  nonUniqueElements = require('./nonUniqueElements');
 
 test('returns non unique elements', () => {
   expect(nonUniqueElements([1, 2, 3, 1, 3])).toEqual([1, 3, 1, 3]);
