@@ -7,4 +7,5 @@ function correctSentence(text) {
   return res;
 }
 
+
 module.exports = correctSentence;
