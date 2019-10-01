@@ -1,6 +1,4 @@
 /*
-You are given a non-empty list of integers (X).
-
 For this task, you should return a list consisting of
 only the non-unique elements in this list.
 
