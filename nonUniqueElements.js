@@ -1,4 +1,4 @@
-function nonUniqueElements(data) {
+function  nonUniqueElements(data) {
   let res = [];
   let frequency = new Object();
   let size = data.length;
