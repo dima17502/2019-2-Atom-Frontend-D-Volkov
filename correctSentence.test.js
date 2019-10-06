@@ -1,4 +1,4 @@
-const correctSentence = require('./correctSentence.js');
+const  correctSentence = require('./correctSentence.js');
 
 test('returns correct sentence', () => {
   expect(correctSentence("greetings, friends")).toBe("Greetings, friends.");
